@@ -1,0 +1,81 @@
+{% extends "news/base.html" %}
+{% load static %}
+{% block content %}
+<body style="margin-top:150px;margin-left:150px;">
+<div class="p-b400">
+    <br>
+    <br>
+    <div class="container">
+        <div class="card-deck" style="height:250px;">
+            <div class="card mr-4">
+                <img class="card-img" src="{% static 'news/images/technology.jpg' %}" alt="Card image" width="100%"
+                     height="100%">
+                <a href="{% url 'scrape' %}" class="btn btn-primary">Tech</a>
+            </div>
+            <div class="card mr-4">
+                <img class="card-img" src="{% static 'news/images/econo.jpg' %}" alt="Card image" width="100%"
+                     height="100%">
+                <a href="{% url 'scrape1' %}" class="btn btn-primary">Economy</a>
+            </div>
+            <div class="card  mr-4">
+                <img class="card-img" src="{% static 'news/images/sports.jpg' %}" alt="Card image" width="100%"
+                     height="100%">
+                <a href="{% url 'scrape2' %}" class="btn btn-primary">Sports</a>
+            </div>
+            <div class="card  mr-4">
+                <img class="card-img" src="{% static 'news/images/automobile.jpg' %}" alt="Card image" width="100%"
+                     height="100%">
+                <a href="{% url 'scrape6' %}" class="btn btn-primary">Automobile</a>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="container">
+        <div class="card-deck">
+            <div class="card mr-4">
+                <img class="card-img" src="{% static 'news/images/Politics.png' %}" alt="Card image" width="100%"
+                     height="100%">
+                <a href="{% url 'scrape3' %}" class="btn btn-primary">Politics</a>
+            </div>
+            <div class="card mr-4">
+                <img class="card-img" src="{% static 'news/images/life&health.jpg' %}" alt="Card image" width="100%"
+                     height="100%">
+                <a href="{% url 'scrape4' %}" class="btn btn-primary">Lifestyle & Health</a>
+            </div>
+            <div class="card mr-4">
+                <img class="card-img" src="{% static 'news/images/entertainmentnews.png' %}" alt="Card image"
+                     width="100%"
+                     height="100%">
+                <a href="{% url 'scrape5' %}" class="btn btn-primary">Entertainment</a>
+            </div>
+            <div class="card mr-4">
+                <img class="card-img" src="{% static 'news/images/disaster.jpg' %}" alt="Card image" width="100%"
+                     height="100%">
+                <a href="{% url 'scrape7' %}" class="btn btn-primary">Disaster</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-between align-items-center breaking-news bg-white">
+                <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news">
+                    <span class="d-flex align-items-center">&nbsp;News</span></div>
+                <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();"
+                         onmouseout="this.start();">
+                    <span>Sports: </span><a href="#">Sports news. </a>
+                    <span class="dot"></span>
+                    <span>Politics: </span>
+                    <a href="#">Politics news </a>
+                    <span class="dot"></span>
+                    <span>Health: </span>
+                    <a href="#">Health news</a>
+                </marquee>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+{% endblock content %}
